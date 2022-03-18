@@ -2,6 +2,8 @@ version: '3.4'
 services:
   netbox: &netbox
     image: netboxcommunity/netbox:${VERSION-v3.1-1.6.0}
+    labels:
+      shipyard.route: '/'
     depends_on:
     - postgres
     - redis
